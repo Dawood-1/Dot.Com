@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            overflow-x: hidden !important;
+        }
+
+        :root {
+            --icon-font-size: 18px;
+            --media-icon-font-size: 14px;
+
+        }
+
+        .flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+        }
+
+        .flex-c {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .main {
+            width: 100vw;
+            background-color: rgb(221, 78, 78);
+
+        }
+
+        .container {
+            width: 90%;
+            /* background-color: gray; */
+            margin: auto;
+
+        }
+
+        .top-bar-icon,
+        .top-bar-flex {
+            text-align: center;
+            color: white;
+
+        }
+
+        .top-bar-icon i {
+            font-size: var(--icon-font-size);
+            color: white;
+            padding: 5px 5px;
+            text-align: center;
+        }
+
+        @media(max-width:576px) {
+            .top-bar-icon i {
+                font-size: var(--media-icon-font-size);
+            }
+
+            .top-bar-flex {
+                font-size: var(--media-icon-font-size);
+            }
+        }
+
+        .main-navbar {
+            width: 100vw;
+            padding: 15px 10px;
+        }
+
+        .container-navbar {
+            width: 90%;
+            margin: auto;
+        }
+
+        .navbar-edntiy {
+            margin: auto;
+        }
+
+        .logo h1 {
+            font-size: 24px;
+            color: rgb(221, 78, 78);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            align-items: center;
+            text-align: center;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            font-weight: 600;
+            color: black;
+        }
+
+        .navbar a:hover {
+            color: rgb(221, 78, 78);
+
+        }
+
+        .navbar button {
+            padding: 10px 15px;
+            background-color: rgb(221, 78, 78);
+            border: none;
+            color: white;
+            font-size: 17px;
+            font-weight: 700;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        .fa-bars {
+            display: none;
+        }
+
+        div.nav_menu {
+            right: 2vw;
+        }
+
+        @media(max-width:768px) {
+            .logo h1 {
+                font-size: 18px;
+
+            }
+
+            .fa-bars {
+                display: block;
+                font-size: 20px;
+                padding-right: 15px;
+            }
+
+            .navbar {
+                position: absolute;
+                display: none;
+                width: 80vw;
+                left: 50%;
+                top: 90px;
+                transform: translateX(-50%);
+                border-radius: 20px;
+                transition: 3.4s all ease-in-out;
+                background-color: rgb(221, 78, 78);
+                padding: 20px;
+                z-index: 1000;
+            }
+
+            .navbar a {
+                display: block;
+                margin: 20px 0 20px 20px;
+                color: white;
+            }
+
+            .navbar button {
+                background-color: white;
+                color: rgb(221, 78, 78);
+            }
+
+            .navbar.nav_menu {
+                display: block;
+                right: 0;
+            }
+        }
+
+        @media(max-width:576px) {
+            .logo h1 {
+                font-size: 17px;
+
+            }
+        }
+
+        .img {
+            background-image: url('ofice.jpg'), linear-gradient(rgba(12, 12, 12, 0.4), rgba(26, 25, 25, 0.4));
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-blend-mode: multiply;
+            height: 400px;
+            width: 100%;
+            border: 1px solid #ccc;
+            position: relative;
+            margin-bottom: 50px;
+        }
+
+        .img-title {
+            width: 90%;
+            text-align: center;
+            font-size: 18px;
+            color: white;
+            position: absolute;
+            left: 25%;
+            transform: translateX(-50%);
+            top: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+        }
+
+        .img-title a {
+            font-size: 20px;
+            color: white;
+            background-color: rgb(221, 78, 78);
+            text-decoration: none;
+            text-align: center;
+
+        }
+
+        @media(max-width:576px) {
+            .img-title {
+                font-size: 13px !important;
+            }
+
+            .img-title a {
+                font-size: 12px;
+            }
+        }
+
+        .main-three-part {
+            width: 100vw;
+            background-color: white;
+
+        }
+
+        .container-three-part {
+            width: 90%;
+            margin: auto;
+            background-color: white;
+
+        }
+
+
+
+        .title-three {
+            text-align: center;
+        }
+
+        .about-top {
+            font-size: 20px;
+        }
+
+        .title-haed-part-three {
+            padding-top: 20px;
+            padding-bottom: 30px;
+        }
+
+        .title-haed-part-three h3 {
+            font-size: 35px;
+            font-weight: bolder;
+        }
+
+        .icon-title-one {
+            padding: 40px;
+            line-height: 30px;
+        }
+
+        .icon-title-one h3 {
+            font-size: 24px;
+            font-weight: bolder;
+        }
+
+        .fa-handshake-slash {
+            font-size: 18px;
+            background-color: rgb(221, 78, 78);
+            padding: 10px 20px;
+            border-radius: 16px;
+            color: white;
+
+        }
+
+        .icon-title-two {
+            padding: 30px;
+            line-height: 30px;
+        }
+
+        .icon-title-two h3 {
+            font-size: 24px;
+            font-weight: bolder;
+        }
+
+        .fa-eye-slash {
+            font-size: 18px;
+            background-color: rgb(221, 78, 78);
+            ;
+            padding: 10px 20px;
+            border-radius: 16px;
+            color: white;
+        }
+
+        .img-three-part-one {
+            background-image: url('meeting.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-blend-mode: multiply;
+            height: 200px;
+            width: 45%;
+            text-align: center;
+            margin: auto;
+        }
+
+        .img-three-part-two {
+            background-image: url('laptop.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-blend-mode: multiply;
+            margin: auto;
+            height: 200px;
+            width: 45%;
+            margin-bottom: 30px;
+
+        }
+
+        @media(max-width:992px) {
+            .title-haed-part-three h3 {
+                font-size: 30px;
+            }
+
+            .about-top {
+                font-size: 16px;
+            }
+
+            .icon-title-one {
+                line-height: 23px;
+            }
+
+            .icon-title-one h3 {
+                font-size: 20px;
+            }
+
+            .icon-title-one p {
+                font-size: var(--media-icon-font-size);
+            }
+
+            .img-three-part-one {
+                height: 200px;
+                width: 45%;
+            }
+
+            .icon-title-two {
+                line-height: 23px;
+            }
+
+            .icon-title-two h3 {
+                font-size: 20px;
+            }
+
+            .icon-title-two p {
+                font-size: var(--media-icon-font-size)
+            }
+
+            .img-three-part-two {
+                height: 200px;
+                width: 45%;
+
+            }
+
+
+        }
+
+
+        @media(max-width:768px) {
+            .about-top {
+                font-size: 14px;
+            }
+
+            .title-haed-part-three h3 {
+                font-size: 25px;
+
+            }
+
+            .img-three-part-one {
+                height: 200px;
+                width: 65%;
+
+            }
+
+            .img-three-part-two {
+                height: 200px;
+                width: 65%;
+
+            }
+        }
+
+        @media(max-width:576px) {
+            .about-top {
+                font-size: 10px !important;
+            }
+
+            .title-haed-part-three h3 {
+                font-size: 18px;
+
+            }
+
+            .img-three-part-one {
+                height: 170px;
+                width: 85%;
+            }
+
+            .img-three-part-two {
+                height: 170px;
+                width: 85%;
+            }
+        }
+
+        .main-by-loop {
+            width: 100vw;
+
+        }
+
+        .container-by-loop {
+            background-image: linear-gradient(rgba(15, 15, 15, 0.61), rgba(22, 22, 22, 0.596)), url('house.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 250px;
+            margin-bottom: 50px;
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loop-section {
+            text-align: center;
+            color: white;
+            display: flex;
+            justify-content: center;
+            width: 80%;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .counter-box {
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 120px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .label {
+            font-size: 18px;
+            font-weight: normal;
+            margin-top: 5px;
+        }
+
+        @media(max-width:992px) {
+            .counter-box {
+                font-size: 20px;
+            }
+
+            .label {
+                font-size: var(--media-icon-font-size);
+
+            }
+        }
+
+        @media(max-width:768px) {
+            .counter-box {
+                font-size: 17px;
+            }
+
+            .label {
+                font-size: var(--media-icon-font-size);
+
+            }
+        }
+
+        @media(max-width:576px) {
+            .loop-section {
+                width: 90%;
+            }
+
+            .counter-box {
+                font-size: var(--media-icon-font-size);
+            }
+
+            .label {
+                font-size: 8px;
+
+            }
+        }
+
+        .meet-the-team {
+            width: 100vw;
+        }
+
+        .container-meet-the-team {
+            width: 90%;
+            /* background-color: red; */
+            margin: auto;
+        }
+
+        .title-meet-the-team {
+            text-align: center;
+            padding: 25px;
+        }
+
+        .img-meet-the-team {
+            padding-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            flex-wrap: wrap;
+        }
+
+        .team-member {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 23%;
+            text-align: center;
+        }
+
+        .team-member img {
+            width: 100%;
+            height: 220px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .team-member span {
+            margin-top: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+
+        @media (max-width: 992px) {
+            .team-member {
+                width: 22%;
+            }
+
+            .team-member img {
+                height: 190px;
+            }
+        }
+
+
+        @media (max-width: 768px) {
+            .team-member {
+                width: 30%;
+            }
+
+            .team-member img {
+                height: 140px;
+            }
+        }
+
+
+        @media (max-width: 576px) {
+            .img-meet-the-team {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+
+            .team-member {
+                width: 60%;
+            }
+
+            .team-member img {
+                height: 180px;
+            }
+        }
+
+        .last-logo-main {
+            width: 100vw;
+            background-color: rgb(221, 78, 78);
+            margin-bottom: 30px;
+
+        }
+
+        .last-logo-container {
+            width: 90%;
+            background-color: rgb(221, 78, 78);
+            margin: auto;
+            padding: 20px 20px;
+        }
+
+        .card-flex {
+            padding: 20px 20px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            flex-wrap: wrap;
+        }
+
+        .card-one {
+            margin-top: 40px;
+            width: 15%;
+            height: 90px;
+            background-color: white;
+            border-radius: 5px;
+            text-align: center;
+            padding: 10px 10px;
+            align-items: center;
+        }
+
+        .card-one img {
+            width: 90%;
+            height: 60px;
+        }
+
+        @media(max-width:768px) {
+            .card-one {
+                width: 20%;
+                height: 100px;
+            }
+
+            .card-one img {
+                width: 90%;
+                height: 100px;
+            }
+        }
+
+        .test-main {
+            width: 100vw;
+            background-color: white;
+        }
+
+        .test-container {
+            width: 90%;
+            background-color: white;
+            margin: auto;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .test-img {
+            border-radius: 15px;
+            width: 120px;
+            height: auto;
+            padding: 20px 5px;
+            /* background-color: red; */
+            margin: auto;
+        }
+
+        .test-img img {
+            border-radius: 45px;
+            width: 100px;
+            height: auto;
+            border: none;
+            border: 3px solid;
+            display: block;
+        }
+        .test-p{
+            width: 40%;
+            margin: auto;
+            text-align: center;
+            padding-bottom: 30px;
+            margin-bottom: 20px;
+        }
+        @media(max-width:768px){
+            .test-title h1 {
+                font-size: 18px;
+            }
+            .test-p{
+                width: 80%;
+            }
+            .footer-flex{
+            display: flex;
+            gap: 50px;
+            flex-direction: column;
+            align-items: center;
+           
+        }
+        }
+
+        .footer-main{
+            width: 100vw;
+            background-color: #020627;
+        }
+        .footer-container{
+            width: 90%;
+            background-color: #020627;
+            margin: auto;
+        }
+        .footer-flex{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            padding: 20px 5px;
+            color: white;
+        }
+        .about-footer {
+            text-align: center;
+            width: 34%;
+            line-height: 30px;
+            margin-top: 40px;
+        }
+        .contact-footer{
+            text-align: center;
+            width: 33%;
+            line-height: 30px;
+            padding-top: 0px;
+        }
+        .news-footer{
+            text-align: center;
+            width: 33%;
+            line-height: 30px;
+            padding-top:0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="top-bar-flex flex">
+                <div class="top-bar">
+                    24/7 online support
+                </div>
+                <div class="top-bar-icon ">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-square-twitter"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-navbar">
+        <div class="container-navbar">
+            <div class="navbar-edntiy flex">
+                <div class="logo">
+                    <h1>DOT.COM <br> <span style="color: black;">SOLUTION</span></h1>
+                </div>
+                <div id="nav" class="navbar">
+                    <a href="">HOME</a>
+                    <a href="">ABOUT</a>
+                    <a href="">SERVICES</a>
+                    <a href="">BLOG</a>
+                    <a href="">CONTACT</a>
+                    <button>Get a Quote</button>
+                </div>
+                <i class="fa-solid fa-bars" onclick="show_menu()"></i>
+            </div>
+        </div>
+    </div>
+    <div class="main-by-img">
+        <div class="container-by-img">
+            <div class="img"></div>
+            <div class="img-title">
+                <span>
+                    <h1>ABOUT US</h1>
+                    <a href="">HOME</a>
+                    <a href="">ABOUT</a>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="main-three-part">
+        <div class="container-three-part">
+            <div class="title-three">
+                <span class="about-top">
+                    <h3> ABOUT COMPANY</h3>
+                </span>
+                <div class="title-haed-part-three">
+                    <h3>We,re Delivering The Best Customer Experience </h3>
+                </div>
+                <div class="icon-and-title-part-three">
+
+                    <div class="icon-title-one">
+                        <i class="fa-solid fa-handshake-slash"></i>
+                        <h3>Our Mission</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur vero, soluta labore natus
+                            ad iure.</p>
+                    </div>
+
+                    <div class="img-three-part-one">
+                        <div class="img-three"></div>
+                    </div>
+                    <div class="icon-title-two">
+                        <i class="fa-solid fa-eye-slash"></i>
+                        <h3>Our Vision</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur vero, soluta labore natus
+                            ad iure.</p>
+                    </div>
+                    <div class="img-three-part-two">
+                        <div class="img-three-two"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-by-loop">
+        <div class="container-by-loop">
+            <div class="loop-section">
+                <div class="counter-box">
+                    <div class="one">0</div>
+                    <span class="label">Customers</span>
+                </div>
+                <div class="counter-box">
+                    <div class="two">0</div>
+                    <span class="label">Branches</span>
+                </div>
+                <div class="counter-box">
+                    <div class="three">0</div>
+                    <span class="label">Employees</span>
+                </div>
+                <div class="counter-box">
+                    <div class="four">0</div>
+                    <span class="label">Countries</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="meet-the-team">
+        <div class="container-meet-the-team">
+            <div class="title-meet-the-team">
+                <h3>MEET THE TEAM</h3>
+            </div>
+            <div class="img-meet-the-team">
+                <div class="team-member">
+                    <img src="img-one.jpg" alt="Hashim French">
+                    <span>Hashim French</span>
+                </div>
+                <div class="team-member">
+                    <img src="img-two.jpg" alt="Maria B">
+                    <span>Maria B</span>
+                </div>
+                <div class="team-member">
+                    <img src="img-three.png" alt="Emma Wood">
+                    <span>Emma Wood</span>
+                </div>
+                <div class="team-member">
+                    <img src="img-four.jpg" alt="Johne Dee">
+                    <span>Johne Dee</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="last-logo-main">
+        <div class="last-logo-container">
+            <div class="card-flex">
+                <div class="card-one">
+                    <img src="smart home.png" alt="" srcset="" width="120px">
+                </div>
+
+                <div class="card-one">
+                    <img src="cctv brand.jpg" alt="" srcset="" width="120px">
+
+                </div>
+
+                <div class="card-one">
+                    <img src="secure cam.png" alt="" srcset="" width="120px">
+
+                </div>
+
+                <div class="card-one">
+                    <img src="renovation.jpg" alt="" srcset="" width="120px">
+
+                </div>
+
+                <div class="card-one">
+                    <img src="alpha.jpg" alt="" srcset="" width="120px">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="test-main">
+        <div class="test-container">
+            <div class="test-title">
+                <h1>TESTIMONIAL</h1><br>
+                <p>What Our Clients say</p>
+            </div>
+            <div class="test-img">
+                <img src="img-three.png" alt="" srcset="">
+            </div>
+          <div class="test-p">
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem doloribus laboriosam ducimus excepturi, 
+                adipisicing elit. Autem doloribus laboriosam ducimus excepturi, 
+             </p> 
+   
+          </div>
+        </div>
+    </div>
+
+
+    <div class="footer-main">
+        <div class="footer-container">
+            <div class="footer-flex ">
+                <div class="about-footer">
+                    <h2>About Company</h2>
+                   <p>
+                    We have 14+ years Experience Helping
+                    you overcom technology challenges
+                   </p>
+
+                   <div class="top-bar-icon ">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-square-twitter"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+                </div>
+
+                <div class="contact-footer">
+                    <h2>Contact</h2>
+                    <p>
+                        address : 4211 webstar street <br>
+                        email : info@gmail.com <br>
+                        phone : (+44)123 456 789 <br>
+                    </p>
+                </div>
+
+                
+                <div class="news-footer">
+                    <h2>NewsLetter</h2>
+                    <p>
+                        subscibe to our newsletter to receive <br>
+                        update on  the latest new ! <br>
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+
+
+
+
+
+    <script>
+        function show_menu() {
+            let navbar = document.querySelector('.navbar');
+            navbar.classList.toggle('nav_menu');
+            console.log(navbar);
+        }
+
+        function startCountingAnimation(targetElement, start, end, duration, isDecimal = false) {
+            let current = start;
+            let increment = (end - start) / (duration / 10);
+
+            let interval = setInterval(() => {
+                current += increment;
+                if (current >= end) {
+                    current = end;
+                    clearInterval(interval);
+                }
+                if (isDecimal) {
+                    targetElement.innerText = current.toFixed(1);
+                } else {
+                    targetElement.innerText = Math.round(current) + "+";
+                }
+            }, 10);
+        }
+
+        let observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    if (entry.target.classList.contains('one')) {
+                        startCountingAnimation(entry.target, 1, 15000, 2000);
+                    } else if (entry.target.classList.contains('two')) {
+                        startCountingAnimation(entry.target, 1, 20, 1000);
+                    } else if (entry.target.classList.contains('three')) {
+                        startCountingAnimation(entry.target, 1, 1500, 1500);
+                    } else if (entry.target.classList.contains('four')) {
+                        startCountingAnimation(entry.target, 1, 8, true);
+                    }
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.loop-section div').forEach(box => observer.observe(box));
+
+    </script>
+</body>
+
+</html>
